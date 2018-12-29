@@ -17,9 +17,9 @@ import java.util.Map;
  * Manages the commands. Only modification to the file should be the SERVER_ID, MOD_ROLE_ID, and ADMIN_ROLE_ID values.
  */
 public class CommandManager {
-    private static final long SERVER_ID = 362689877269020684L; // REPLACE 0 WITH YOUR SERVER ID
-    private static final long MOD_ROLE_ID = 363053253509775371L; // REPLACE 0 WITH THE MOD ROLE ON YOUR SERVER (OR ADMIN IF NO MOD).
-    private static final long ADMIN_ROLE_ID = 459560475034648616L; // REPLACE 0 WITH THE ADMIN ROLE ON YOUR SERVER.
+    private static final long SERVER_ID = 362689877269020684L;
+    private static final long MOD_ROLE_ID = 363053253509775371L;
+    private static final long ADMIN_ROLE_ID = 459560475034648616L;
     /**
      * Maps command trigger words to the command.
      */
