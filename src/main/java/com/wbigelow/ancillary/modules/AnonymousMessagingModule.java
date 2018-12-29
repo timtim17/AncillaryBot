@@ -66,6 +66,15 @@ public class AnonymousMessagingModule implements Module {
         final String anonymousMessage = content.contains(" ") ? content.substring(content.indexOf(" ") + 1) : "";
         final int anonID;
         final MessageAuthor author = message.getAuthor();
+        if (!message.isPrivate()) {
+            new MessageBuilder()
+                    .setContent("You should only use this command in a direct message to the bot.")
+                    .send(author.asUser().get());
+            if (message.canYouDelete()) {
+                message.delete();
+            }
+            return;
+        }
         if (anonIDs.containsKey(author)) {
             anonID = anonIDs.get(message.getAuthor());
         } else {
