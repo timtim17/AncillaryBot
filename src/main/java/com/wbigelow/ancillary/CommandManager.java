@@ -52,7 +52,7 @@ public class CommandManager {
             final Role modRole = server.getRoleById(MOD_ROLE_ID).get();
             final Role adminRole = server.getRoleById(ADMIN_ROLE_ID).get();
             if (command.getRequiredPermissionLevel().getLevel() <=
-                    ((userRoles.contains(adminRole) ? 2 : 0) + (userRoles.contains(modRole) ? 1 : 0))) {
+                    ((userRoles.contains(adminRole) ? 3 : 0) + (userRoles.contains(modRole) ? 2 : 0))) {
                 command.execute(message, discordApi);
             } else {
                 new MessageBuilder()
