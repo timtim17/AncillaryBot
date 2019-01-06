@@ -39,6 +39,7 @@ public class AncillaryEntry {
         discordApi.updateActivity(ActivityType.PLAYING, ">help");
         discordApi.addServerMemberJoinListener(new ServerMemberJoinListenerImpl());
         discordApi.addMessageDeleteListener(new MessageDeleteListenerImpl());
+        discordApi.addReactionAddListener(new PinReactionListenerImpl());
         System.out.println(discordApi.createBotInvite());
     }
 }
